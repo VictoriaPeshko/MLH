@@ -53,13 +53,17 @@ describe('My Little Hero', function () { //define suite title by passing a strin
     });
 
     describe('Labeles are correct', function (){
-        it('TC-0008 Label for #1 = What is your Hero\'s name?', function (){
+        it('TC-006 Label for #1 = What is your Hero\'s name?', function (){
             let text = $$(sel.label)[0].getAttribute('title')
             expect(text).toEqual(exp.labelName)
 
 
         })
         it('TC-007 Label for gender = Please choose a gender.', function (){
+            let text=$$(sel.label)[1].getText()
+            expect(text).toEqual(exp.labelGender)
+        })
+        it('TC-008 Label for gender = Please choose a gender.', function (){
             let text=$$(sel.label)[1].getText()
             expect(text).toEqual(exp.labelGender)
         })
